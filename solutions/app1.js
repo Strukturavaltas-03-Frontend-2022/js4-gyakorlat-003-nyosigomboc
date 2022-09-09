@@ -1,10 +1,10 @@
 /**
- * TODO: a startFetch függvény futtasson egy fetch kérést. 
+ * TODO: a startFetch függvény futtasson egy fetch kérést.
  * Hívd meg a fetch függvényt a kapott paraméterekkel!
  * CSAK A 16. SORBAN DOLGOZZ!
- * 
+ *
  * PÉLDÁK: https://developer.mozilla.org/en-US/docs/Web/API/fetch#examples
- * 
+ *
  * LEÍRÁS: A függvény a kapott paraméterek alapján indít egy fetch kérést.
  * Miután a válasz megérkezett, parse-olja az adatokat a response.json()
  * metódus segítségével.
@@ -13,9 +13,9 @@
  * @returns {[{}, {}]} objektumok tömbjével tér vissza
  */
 const startFetch = async (url = '') => {
-    const response = await fetch('');
-    const data = await response.json();
-    return data;
+  const response = await fetch(new Request(url));
+  const data = await response.json();
+  return data;
 };
 
 /**
@@ -23,5 +23,5 @@ const startFetch = async (url = '') => {
  * CSAK A 26. SORBAN DOLGOZZ!
  */
 export {
-    
-}
+  startFetch,
+};
